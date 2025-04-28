@@ -18,6 +18,9 @@ body {
     color: var(--text-color);
 }
 
+.logo-text {
+  font-family: 'Amaranth', sans-serif;
+}
 
 .container-navbar {
     width: 100%;
