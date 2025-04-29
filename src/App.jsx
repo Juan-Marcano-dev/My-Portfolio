@@ -28,7 +28,7 @@ function App() {
         />
 
         <Collapse isOpen={openedNavBar} navbar >
-          <Nav className="ms-auto" >
+          <Nav className="ms-auto" navbar>
             <NavItem>
               <NavLink href="#">Sobre Mi</NavLink>
             </NavItem>
