@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-
+import StarsBackground from './Components/StarsBackground';
 import {
   Navbar,
   NavbarBrand,
@@ -44,6 +44,10 @@ function App() {
           </Nav>
         </Collapse>
       </Navbar>
+      <div>
+      <StarsBackground />
+      
+    </div>
     </div>
   );
 }

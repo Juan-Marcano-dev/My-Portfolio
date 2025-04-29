@@ -32,3 +32,73 @@ color: var(--text-color);
   color: var(--text-color);
 }
 
+
+
+
+
+
+
+
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+  
+}
+
+.stars-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation-name: animStar;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.8;
+}
+
+.star.medium {
+  opacity: 0.6;
+}
+
+.star.big {
+  opacity: 0.4;
+}
+
+@keyframes animStar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  z-index: 2;
+}
+
+#title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
