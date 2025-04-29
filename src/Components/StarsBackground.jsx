@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import '../index.css';
+import { useEffect, useState } from "react";
+import "../index.css";
 
 function StarsBackground() {
   const [layers, setLayers] = useState({});
@@ -39,7 +39,7 @@ function StarsBackground() {
               left: `${star.x}px`,
               top: `${star.y}px`,
               animationDuration: `${star.duration}s`,
-              animationDelay: `${star.delay}s`
+              animationDelay: `${star.delay}s`,
             }}
           />
         ))

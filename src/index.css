@@ -1,8 +1,6 @@
-
-
 @font-face {
-  font-family: 'Amaranth';
-  src: url('./assets/fonts/Amaranth-Regular.ttf') format('truetype');
+  font-family: "Amaranth";
+  src: url("./assets/fonts/Amaranth-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -10,45 +8,34 @@
 :root {
   --color-bg: #0b0c10;
   --text-color: #f8f9fa;
-  --font-main: 'Amaranth', sans-serif;
+  --font-main: "Amaranth", sans-serif;
 }
 
-html, body {
-  font-family: var(--font-main) ;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  font-family: var(--font-main);
+  overflow-x: hidden;
 }
-
 
 /* -------------NavBar--------- */
 
 .color-navbar {
-background-color: var(--color-bg);
+  background-color: var(--color-bg);
 }
 
 .logo-text {
-color: var(--text-color);
+  color: var(--text-color);
 }
 
 .navbar .nav-link {
   color: var(--text-color);
 }
 
-
-
-
-
-
-
-
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  overflow: hidden;
-  
-}
+/* --------efecto parallax -----*/
 
 .stars-container {
   position: relative;
@@ -101,4 +88,34 @@ html, body {
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+/* Inicialmente, el elemento está oculto y fuera de vista */
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in-left {
+  transform: translateX(-100px);
+}
+
+.fade-in-right {
+  transform: translateX(100px);
+}
+
+/* Cuando el elemento es visible, se aplica la animación */
+.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
