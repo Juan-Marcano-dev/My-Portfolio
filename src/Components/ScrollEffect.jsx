@@ -14,7 +14,7 @@ function ScrollEffect() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.target.id === "left-img") {
-            // Activa la animación cuando entra en vista y desactívala cuando salga
+           
             setLeftVisible(entry.isIntersecting);
           }
           if (entry.target.id === "right-img") {
@@ -23,7 +23,7 @@ function ScrollEffect() {
         });
       },
       {
-        threshold: 0.3, // Se activa cuando el 30% del elemento es visible
+        threshold: 0.3, 
       }
     );
 
@@ -46,7 +46,7 @@ function ScrollEffect() {
     className={`fade-in-left ${leftVisible ? "visible" : ""}`}
   >
     <div className="custom-text-box">
-      <p></p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci, rerum et amet repellat accusantium molestiae cumque ducimus doloribus commodi cupiditate deserunt magni nisi quas ex ab impedit, asperiores fuga.</p>
     </div>
   </div>
 </Col>
