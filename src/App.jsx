@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./App.css";
-import logo from "./assets/images/logo-inicio.png";
 
 import {
   Navbar,
@@ -13,26 +12,39 @@ import {
 } from "reactstrap";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [openedNavBar, setOpenNavBar] = useState(false);
+  const [openedNavBar, setOpenedNavBar] = useState(false);
+
   return (
-    <>
-      <div className="App">
-        <Navbar color="dark" fixed="top" dark expand="md">
-          <NavbarBrand href="">
-            <NavbarBrand href="/" className="logo-text">
-              &lt;JCMR&gt;
-            </NavbarBrand>
-          </NavbarBrand>
-        <NavbarToggler aria-label="Abrir Menu" />
-        <Collapse > 
+    <div className="App">
+      <Navbar className="color-navbar" fixed="top" expand="sm">
+        <NavbarBrand href="/" className="logo-text">
+          &lt;JCMR&gt;
+        </NavbarBrand>
+
+        <NavbarToggler
+          aria-label="Abrir Menú"
+          aria-expanded={openedNavBar}
+          onClick={() => setOpenedNavBar(!openedNavBar)}
+        />
+
+        <Collapse isOpen={openedNavBar} navbar >
+          <Nav className="ms-auto" >
+            <NavItem>
+              <NavLink href="#">Sobre Mi</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Projects</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Skills</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Contact</NavLink>
+            </NavItem>
+          </Nav>
         </Collapse>
-        
-
-
-        </Navbar>
-      </div>
-    </>
+      </Navbar>
+    </div>
   );
 }
 
