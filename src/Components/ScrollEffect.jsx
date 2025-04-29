@@ -39,19 +39,18 @@ function ScrollEffect() {
   return (
     <Container>
       <Row className="py-5">
-        <Col md="6" className="d-flex justify-content-center">
-          <div
-            ref={leftRef}
-            id="left-img"
-            className={`fade-in-left ${leftVisible ? "visible" : ""}`}
-          >
-            <img
-              src="https://via.placeholder.com/300x200?text=Izquierda"
-              alt="Desde la izquierda"
-              className="img-fluid"
-            />
-          </div>
-        </Col>
+      <Col md="6" className="d-flex justify-content-center">
+  <div
+    ref={leftRef}
+    id="left-img"
+    className={`fade-in-left ${leftVisible ? "visible" : ""}`}
+  >
+    <div className="custom-text-box">
+      <p></p>
+    </div>
+  </div>
+</Col>
+
         <Col md="6" className="d-flex justify-content-center">
           <div
             ref={rightRef}
