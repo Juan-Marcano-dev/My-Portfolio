@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import StarsBackground from './Components/StarsBackground';
 import ScrollEffect from './components/ScrollEffect';
+import ScrollArrow from './Components/ScrollArrow';
 import {
   Navbar,
   NavbarBrand,
@@ -46,10 +47,10 @@ function App() {
         </Collapse>
       </Navbar>
       <div>
-        
       <StarsBackground />
       <ScrollEffect />
     </div>
+    
     </div>
   );
 }

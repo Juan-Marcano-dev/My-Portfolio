@@ -14,7 +14,6 @@ function ScrollEffect() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.target.id === "left-img") {
-           
             setLeftVisible(entry.isIntersecting);
           }
           if (entry.target.id === "right-img") {

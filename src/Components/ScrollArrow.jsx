@@ -1,30 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import './ScrollArrow.css'; // Asegúrate de tener este archivo CSS
 
-const ScrollArrow = () => {
-  const [opacity, setOpacity] = useState(1);
+import React from 'react';
+import './styles.css/ScrollArrow.css';
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const topWindow = window.scrollY;
-      const position = 1 - (topWindow * 1.5) / window.innerHeight;
-      setOpacity(position);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+const Rocket = () => {
+  const scrollToHeader = () => {
+    const header = document.getElementById('main-header');
+    if (header) {
+      header.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <div className="arrow-wrap" style={{ opacity }}>
-      <a href="#content">
-        <span className="arrow"></span>
-      </a>
+    <div className="rocket-wrapper" onClick={scrollToHeader} style={{ cursor: 'pointer' }}>
+      <div className="rocket">
+        <div className="rocket-body">
+          <div className="body"></div>
+          <div className="fin fin-left"></div>
+          <div className="fin fin-right"></div>
+          <div className="window"></div>
+        </div>
+        <div className="exhaust-flame"></div>
+        <ul className="exhaust-fumes">
+          <li></li><li></li><li></li><li></li><li></li>
+          <li></li><li></li><li></li><li></li>
+        </ul>
+        <ul className="star">
+          <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        </ul>
+      </div>
     </div>
   );
 };
 
-export default ScrollArrow;
+export default Rocket;

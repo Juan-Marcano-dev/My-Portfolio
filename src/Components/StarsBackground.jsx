@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../index.css";
+import ScrollArrow from "./ScrollArrow";
 
 function StarsBackground() {
   const [layers, setLayers] = useState({});
@@ -49,6 +50,7 @@ function StarsBackground() {
         <br />
         <span>Portfolio Frontend</span>
       </div>
+      <ScrollArrow/>
     </div>
   );
 }
