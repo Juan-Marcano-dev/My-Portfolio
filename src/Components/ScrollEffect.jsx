@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import "./styles.css/ScrollEffect.css";
+import "./styles/ScrollEffect.css";
 
 function ScrollEffect() {
   const leftRef = useRef(null);
@@ -22,7 +22,7 @@ function ScrollEffect() {
         });
       },
       {
-        threshold: 0.3, 
+        threshold: 0.3,   
       }
     );
 
@@ -43,14 +43,14 @@ function ScrollEffect() {
     ref={leftRef}
     id="left-img"
     className={`fade-in-left ${leftVisible ? "visible" : ""}`}
-  >
-    <div className="custom-text-box">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci, rerum et amet repellat accusantium molestiae cumque ducimus doloribus commodi cupiditate deserunt magni nisi quas ex ab impedit, asperiores fuga.</p>
+>
+    <div className="custom-text-box" id="container">
+      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium adipisci, rerum et amet repellat accusantium molestiae cumque ducimus doloribus commodi cupiditate deserunt magni nisi quas ex ab impedit, asperiores fuga.</p>
     </div>
   </div>
 </Col>
 
-        <Col md="6" className="d-flex justify-content-center">
+        <Col md="6" className="d-flex justify-content-center" id="container">
           <div
             ref={rightRef}
             id="right-img"

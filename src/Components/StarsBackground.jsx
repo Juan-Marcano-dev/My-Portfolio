@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./styles.css/StarsBackground.css";
+import "./styles/StarsBackground.css";
 import ScrollArrow from "./ScrollArrow";
 
 function StarsBackground() {
