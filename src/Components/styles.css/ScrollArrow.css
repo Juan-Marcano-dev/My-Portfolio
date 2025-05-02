@@ -4,8 +4,8 @@
     --lightgrey: #dadada;
     --midgrey: #b4b2b2;
     --darkgrey: #554842;
-    --red: #f01a19;
-    --darkred: #a75248;
+    --red: #7b0404;
+    --darkred: #0c1d54;
   }
   
   body {
@@ -21,10 +21,11 @@
   }
   
   .rocket {
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(0.6);
     position: relative;
     width: 80px;
     height: 300px;
+    top: 130px;
   }
   
   .rocket-body {
@@ -93,7 +94,7 @@
   
   .exhaust-flame {
     position: absolute;
-    top: 90%;
+    top: 60%;
     width: 28px;
     background: linear-gradient(to bottom, transparent 10%, var(--white) 100%);
     height: 150px;
@@ -102,75 +103,6 @@
     animation: exhaust 0.2s infinite;
   }
   
-  .exhaust-fumes li {
-    width: 60px;
-    height: 60px;
-    background-color: var(--white);
-    list-style: none;
-    position: absolute;
-    border-radius: 50%;
-  }
-  
-  .exhaust-fumes li:nth-child(1) {
-    width: 200px;
-    height: 200px;
-    bottom: -300px;
-    animation: fumes 5s infinite;
-  }
-  .exhaust-fumes li:nth-child(2) {
-    width: 150px;
-    height: 150px;
-    left: -120px;
-    top: 260px;
-    animation: fumes 3.2s infinite;
-  }
-  .exhaust-fumes li:nth-child(3) {
-    width: 120px;
-    height: 120px;
-    left: -40px;
-    top: 330px;
-    animation: fumes 3s 1s infinite;
-  }
-  .exhaust-fumes li:nth-child(4) {
-    width: 100px;
-    height: 100px;
-    left: -170px;
-    animation: fumes 4s 2s infinite;
-    top: 380px;
-  }
-  .exhaust-fumes li:nth-child(5) {
-    width: 130px;
-    height: 130px;
-    left: -120px;
-    top: 350px;
-    animation: fumes 5s infinite;
-  }
-  .exhaust-fumes li:nth-child(6) {
-    width: 200px;
-    height: 200px;
-    left: -60px;
-    top: 280px;
-    animation: fumes2 10s infinite;
-  }
-  .exhaust-fumes li:nth-child(7) {
-    width: 100px;
-    height: 100px;
-    left: -100px;
-    top: 320px;
-  }
-  .exhaust-fumes li:nth-child(8) {
-    width: 110px;
-    height: 110px;
-    left: 70px;
-    top: 340px;
-  }
-  .exhaust-fumes li:nth-child(9) {
-    width: 90px;
-    height: 90px;
-    left: 200px;
-    top: 380px;
-    animation: fumes 20s infinite;
-  }
   
   .star li {
     list-style: none;
@@ -273,16 +205,16 @@
   }
   
   @keyframes fumes {
-    50% {
-      transform: scale(1.5);
+    0% {
+      transform: scale(0.6);
       background-color: transparent;
     }
     51% {
-      transform: scale(0.8);
+      transform: scale(1.2);
     }
     100% {
       background-color: var(--white);
-      transform: scale(1);
+      transform: scale(0.6);
     }
   }
   

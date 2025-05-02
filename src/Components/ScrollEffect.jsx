@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import "../index.css";
+import "./styles.css/ScrollEffect.css";
 
 function ScrollEffect() {
   const leftRef = useRef(null);

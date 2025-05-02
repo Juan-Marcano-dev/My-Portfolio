@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "../index.css";
+import "./styles.css/StarsBackground.css";
 import ScrollArrow from "./ScrollArrow";
 
 function StarsBackground() {
@@ -45,12 +45,15 @@ function StarsBackground() {
           />
         ))
       )}
+      
       <div id="title">
+      
         <span>Juan Marcano</span>
         <br />
         <span>Portfolio Frontend</span>
+        <ScrollArrow/>
       </div>
-      <ScrollArrow/>
+      
     </div>
   );
 }

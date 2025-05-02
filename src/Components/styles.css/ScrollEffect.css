@@ -1,0 +1,22 @@
+
+
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in-left {
+  transform: translateX(-100px);
+}
+
+.fade-in-right {
+  transform: translateX(100px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+

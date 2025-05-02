@@ -20,13 +20,6 @@ const Rocket = () => {
           <div className="window"></div>
         </div>
         <div className="exhaust-flame"></div>
-        <ul className="exhaust-fumes">
-          <li></li><li></li><li></li><li></li><li></li>
-          <li></li><li></li><li></li><li></li>
-        </ul>
-        <ul className="star">
-          <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-        </ul>
       </div>
     </div>
   );
