@@ -45,15 +45,13 @@ function StarsBackground() {
           />
         ))
       )}
-      
+
       <div id="title">
-      
         <span>Juan Marcano</span>
         <br />
         <span>Portfolio Frontend</span>
-        <ScrollArrow/>
+        <ScrollArrow />
       </div>
-      
     </div>
   );
 }

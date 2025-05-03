@@ -33,7 +33,7 @@ body {
 
 .rocket-wrapper.disappear {
   opacity: 0;
-  transform: translateY(-50px); /* Movimiento hacia arriba para simular que desaparece */
+  transform: translateY(-50px); 
 }
 
 .rocket {

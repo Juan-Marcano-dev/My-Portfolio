@@ -6,56 +6,40 @@ const ScrollArrow = () => {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
 
   const handleClick = () => {
-    console.log('Click en el cohete');
-    setIsHidden(true); // El cohete desaparece
+    const container = document.getElementById('container');
+    if (container) {
+      container.scrollIntoView({ behavior: 'smooth' });
 
-    setTimeout(() => {
-      const container = document.getElementById('container');
-      if (container) {
-        console.log('Desplazándose hacia el contenedor');
-        container.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 700); // Espera un poco para que el cohete desaparezca antes de hacer scroll
+      setTimeout(() => {
+        setIsHidden(true);
+      }, 400); 
+    }
   };
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      console.log('Scroll detectado', window.scrollY);
-      
-      // Detectamos si estamos en la parte superior
       if (window.scrollY === 0) {
-        console.log('Volviendo a la parte superior');
-        setIsHidden(false); // El cohete vuelve a aparecer cuando se está en la parte superior
+        setIsHidden(false);
       }
 
-      // Detectamos si se está desplazando hacia abajo
       if (window.scrollY > lastScrollY) {
-        if (!isScrollingDown) {
-          console.log('Comenzando a bajar');
-        }
-        setIsScrollingDown(true); // Está bajando
+        setIsScrollingDown(true);
       } else if (window.scrollY < lastScrollY) {
-        if (isScrollingDown) {
-          console.log('Comenzando a subir');
-        }
-        setIsScrollingDown(false); // Está subiendo
+        setIsScrollingDown(false);
       }
 
-      lastScrollY = window.scrollY; // Actualiza la última posición del scroll
+      lastScrollY = window.scrollY;
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isScrollingDown]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div
-      className={`rocket-wrapper ${isHidden ? 'hidden' : ''} ${isScrollingDown ? 'disappear' : ''}`}
+      className={`rocket-wrapper ${isHidden || isScrollingDown ? 'hidden' : ''}`}
       onClick={handleClick}
     >
       <div className="rocket">
