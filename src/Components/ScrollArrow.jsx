@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './styles/ScrollArrow.css';
+import './styles/ScrollArrow.scss';
 
 const ScrollArrow = () => {
   const [isHidden, setIsHidden] = useState(false);
@@ -9,10 +9,7 @@ const ScrollArrow = () => {
     const container = document.getElementById('container');
     if (container) {
       container.scrollIntoView({ behavior: 'smooth' });
-
-      setTimeout(() => {
-        setIsHidden(true);
-      }, 400); 
+      setIsHidden(true);
     }
   };
 

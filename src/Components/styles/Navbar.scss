@@ -1,0 +1,46 @@
+@use "./globalStyles.scss";
+
+.color-navbar {
+  background-color: transparent;
+}
+
+.logo-text {
+  color: var(--text-color);
+  margin-left: 30px;
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+
+  &:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover-color);
+    transform: translateY(-0.25em);
+    border-color: var(--hover-color);
+    color: var(--text-color);
+  }
+}
+
+.navbar {
+  .nav-link {
+    color: var(--text-color);
+  }
+}
+
+.raise {
+  transition: 0.25s;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover-color);
+    transform: translateY(-0.25em);
+    border-color: var(--hover-color);
+    color: var(--text-color);
+  }
+}

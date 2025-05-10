@@ -8,7 +8,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-
+import "../Components/styles/Navbar.scss";
 function NavbarSection() {
   const [openedNavBar, setOpenedNavBar] = useState(false);
 

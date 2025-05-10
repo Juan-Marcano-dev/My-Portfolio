@@ -3,8 +3,7 @@
   --lightgrey: #dadada;
   --midgrey: #b4b2b2;
   --darkgrey: #554842;
-  --darkred: #7b0404;
-  --darkred: #0c1d54;
+  --darkred: #0c1d54; // Corregido para tener solo una definición
 }
 
 body {
@@ -13,12 +12,11 @@ body {
 
 .rocket-wrapper {
   position: absolute;
-  top: 170px;
+  top: 530px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000;
-  width: 80px;
-  height: 300px;
+  width: 55px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,12 +26,12 @@ body {
 
 .rocket-wrapper.hidden {
   opacity: 0;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .rocket-wrapper.disappear {
   opacity: 0;
-  transform: translateY(-50px); 
+  transform: translateY(-50px);
 }
 
 .rocket {
@@ -46,7 +44,7 @@ body {
 .rocket-body {
   width: 60px;
   margin: 0 auto;
-  animation: bounce 0.5s infinite;
+  animation: bounce 0.7s infinite;
   position: relative;
 }
 
