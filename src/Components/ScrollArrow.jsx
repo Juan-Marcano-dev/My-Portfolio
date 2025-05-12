@@ -9,7 +9,7 @@ const ScrollArrow = () => {
     const container = document.getElementById('container');
     if (container) {
       container.scrollIntoView({ behavior: 'smooth' });
-      setIsHidden(true);
+      
     }
   };
 
