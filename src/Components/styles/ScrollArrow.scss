@@ -10,7 +10,7 @@ body {
 
 .rocket-wrapper {
   position: absolute;
-  top: 530px;
+  top: 30px; 
   left: 50%;
   transform: translateX(-50%);
   width: 55px;
@@ -19,111 +19,74 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: opacity 0.4s ease-in-out, transform 0.5s ease-in-out;
-
-    &.hidden {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s;
-  }
-
-  &.disappear {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  .rocket {
-    transform: rotate(180deg) scale(0.6);
-    position: relative;
-    width: 60px;
-    height: 250px;
-
-    .rocket-body {
-      width: 60px;
-      margin: 0 auto;
-      animation: bounce 0.7s infinite;
-      position: relative;
-
-      .body {
-        background-color: $lightgrey;
-        height: 180px;
-        border-top-right-radius: 100%;
-        border-top-left-radius: 100%;
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-        border-top: 5px solid $white;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 48px;
-        height: 13px;
-        background-color: $darkgrey;
-        bottom: -13px;
-        border-bottom-right-radius: 60%;
-        border-bottom-left-radius: 60%;
-      }
-
-      .window {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: $darkred;
-        left: 50%;
-        top: 40px;
-        transform: translateX(-50%);
-        border: 5px solid $midgrey;
-      }
-
-      .fin {
-        position: absolute;
-        z-index: -1;
-        height: 55px;
-        width: 50px;
-        background-color: $darkred;
-
-        &-left {
-          left: -30px;
-          top: 125px;
-          border-top-left-radius: 80%;
-          border-bottom-left-radius: 20%;
-        }
-
-        &-right {
-          right: -30px;
-          top: 125px;
-          border-top-right-radius: 80%;
-          border-bottom-right-radius: 20%;
-        }
-      }
-    }
-
-    .exhaust-flame {
-      position: absolute;
-      top: 60%;
-      width: 28px;
-      background: linear-gradient(to bottom, transparent 10%, $white 100%);
-      height: 150px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: exhaust 0.2s infinite;
-    }
-  }
+  z-index: 1000;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0px);
+.rocket {
+  transform: rotate(180deg) scale(0.6);
+  position: relative;
+  width: 60px;
+  height: 250px;
+
+  .rocket-body {
+    width: 60px;
+    margin: 0 auto;
+    position: relative;
+
+    .body {
+      background-color: $lightgrey;
+      height: 180px;
+      border-top-right-radius: 100%;
+      border-top-left-radius: 100%;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-top: 5px solid $white;
+    }
+
+    .window {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $darkred;
+      left: 50%;
+      top: 40px;
+      transform: translateX(-50%);
+      border: 5px solid $midgrey;
+    }
+
+    .fin {
+      position: absolute;
+      z-index: -1;
+      height: 55px;
+      width: 50px;
+      background-color: $darkred;
+
+      &-left {
+        left: -30px;
+        top: 125px;
+        border-top-left-radius: 80%;
+        border-bottom-left-radius: 20%;
+      }
+
+      &-right {
+        right: -30px;
+        top: 125px;
+        border-top-right-radius: 80%;
+        border-bottom-right-radius: 20%;
+      }
+    }
   }
-  50% {
-    transform: translateY(-4px);
-  }
-  100% {
-    transform: translateY(0px);
+
+  .exhaust-flame {
+    position: absolute;
+    top: 60%;
+    width: 28px;
+    background: linear-gradient(to bottom, transparent 10%, $white 100%);
+    height: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: exhaust 0.2s infinite;
   }
 }
 
@@ -138,5 +101,3 @@ body {
     background: linear-gradient(to bottom, transparent 12%, $white 100%);
   }
 }
-
-
