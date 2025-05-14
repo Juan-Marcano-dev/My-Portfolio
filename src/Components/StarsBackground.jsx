@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./styles/StarsBackground.scss";
-
+import GravityText from './GravityText';
 function StarsBackground() {
   const [layers, setLayers] = useState({});
 
@@ -46,10 +46,14 @@ function StarsBackground() {
       )}
 
       <div id="title">
+        
         <span>Juan Marcano</span>
         <br />
         <span>Portfolio Frontend</span>
+        
       </div>
+      <GravityText/>
+      
     </div>
   );
 }

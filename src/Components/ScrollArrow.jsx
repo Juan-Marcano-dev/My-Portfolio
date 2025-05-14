@@ -35,6 +35,7 @@ const ScrollArrow = () => {
   }, []);
 
   return (
+    <>
     <div
       className={`rocket-wrapper ${isHidden || isScrollingDown ? 'hidden' : ''}`}
       onClick={handleClick}
@@ -49,7 +50,9 @@ const ScrollArrow = () => {
         <div className="exhaust-flame"></div>
       </div>
     </div>
+    </>
   );
+  
 };
 
 export default ScrollArrow;

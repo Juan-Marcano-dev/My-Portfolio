@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import "./styles/ScrollEffect.scss";
+import "./styles/ContentMain.scss";
+import StarsBackground from "./StarsBackground";
 
 function ScrollEffect() {
   const leftRef = useRef(null);
@@ -36,6 +37,8 @@ function ScrollEffect() {
   }, []);
 
   return (
+    <>
+    
     <Container>
       <Row className="py-5">
       <Col md="6" className="d-flex justify-content-center">
@@ -65,6 +68,8 @@ function ScrollEffect() {
         </Col>
       </Row>
     </Container>
+    
+    </>
   );
 }
 
