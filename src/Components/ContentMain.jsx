@@ -38,7 +38,8 @@ function ScrollEffect() {
 
   return (
     <>
-    
+    <div style={{ height: '100vh' }}></div>
+
     <Container>
       <Row className="py-5">
       <Col md="6" className="d-flex justify-content-center">
