@@ -1,5 +1,5 @@
 import './styles/BoxProjects.scss';
-
+import imgProject1 from '../assets/images/img-project-1.png';
 
 const BoxProjects = () => {
   return (
@@ -16,8 +16,7 @@ const BoxProjects = () => {
         </div>
         <div className="visual">
           <img
-            src="https://images.unsplash.com/photo-1548142813-c348350df52b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80"
-            alt=""
+            src={imgProject1} alt="Proyecto 1" className="project-image"
           />
         </div>
       </section>
