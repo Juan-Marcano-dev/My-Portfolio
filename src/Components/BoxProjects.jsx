@@ -6,17 +6,15 @@ const BoxProjects = () => {
     <article>
       <section className="card">
         <div className="text-content">
-          <h3>Elevate Your Brand with Exceptional Design</h3>
+          <h3>Quizz Game</h3>
           <p>
-            Your website is often the first point of contact for potential
-            customers. We believe great design can help elevate your brand and
-            make a lasting impression.
+            In this app I make use of my React, javaScript, HTML, CSS, Saas and API consumption skills to create a scalable, neat and fully functional app including a score system that is stored locally.
           </p>
           <a href="#">Join now</a>
         </div>
         <div className="visual">
           <img
-            src={imgProject1} alt="Proyecto 1" className="project-image"
+            src={imgProject1} alt="" className="project-image"
           />
         </div>
       </section>

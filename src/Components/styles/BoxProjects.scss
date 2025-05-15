@@ -42,7 +42,7 @@ section.card {
     }
   }
   .visual {
-    width:240px;
+    width:280px;
     height:100%;
     position:absolute;
     top:-24px;
@@ -53,7 +53,8 @@ section.card {
       1px 2px 6px fade(white,25%),
       2px 6px 12px fade(black,25%);
     img { 
-      height:110%
+      height:100%;
+      width: 100%;
     }
   }
   &:nth-of-type(odd) {
