@@ -1,75 +1,70 @@
+import { useEffect, useRef, useState } from "react";
 import './styles/BoxProjects.scss';
 import imgProject1 from '../assets/images/img-project-1.png';
+import imgProject2 from '../assets/images/img-project-2.png';
 
 const BoxProjects = () => {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+
+  const [visible1, setVisible1] = useState(false);
+  const [visible2, setVisible2] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === ref1.current && entry.isIntersecting) {
+            setVisible1(true);
+          }
+          if (entry.target === ref2.current && entry.isIntersecting) {
+            setVisible2(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref1.current) observer.observe(ref1.current);
+    if (ref2.current) observer.observe(ref2.current);
+
+    return () => {
+      if (ref1.current) observer.unobserve(ref1.current);
+      if (ref2.current) observer.unobserve(ref2.current);
+    };
+  }, []);
+
   return (
     <article>
-      <section className="card">
+      <section
+        ref={ref1}
+        className={`card fade-in-right ${visible1 ? "visible" : ""}`}
+      >
         <div className="text-content">
           <h3>Quizz Game</h3>
           <p>
-            In this app I make use of my React, javaScript, HTML, CSS, Saas and API consumption skills to create a scalable, neat and fully functional app including a score system that is stored locally.
+            In this app I make use of my React, JavaScript, HTML, CSS, Sass and API consumption skills to create a scalable, neat and fully functional app including a score system that is stored locally.
           </p>
-          <a href="#">Join now</a>
+          <a href="https://juan-marcano-dev.github.io/Quiz-Game-React/">Join now</a>
         </div>
         <div className="visual">
-          <img
-            src={imgProject1} alt="" className="project-image"
-          />
+          <img src={imgProject1} alt="" className="project-image" />
         </div>
       </section>
 
-      <section className="card">
+      <section
+        ref={ref2}
+        className={`card fade-in-left ${visible2 ? "visible" : ""}`}
+      >
         <div className="text-content">
-          <h3>Responsive Design for Every Screen Size</h3>
+          <h3>Dynamic Character Viewer With Rick and Morty API</h3>
           <p>
-            We specialize in creating responsive designs that look great on
-            desktop, tablet, and mobile devices, ensuring your site is
-            accessible to all your visitors.
+            In this application, I apply my skills in React, JavaScript, and API consumption to create a dynamic character search engine based on the Rick and Morty universe. I implemented custom pagination logic, efficiently managed component state, and designed an interface in line with the style of the series, achieving a clean, scalable, and interactive experience.
           </p>
-          <a href="#">Join now</a>
+          <a href="https://juan-marcano-dev.github.io/RickAndMorty-API/">Join now</a>
         </div>
         <div className="visual">
-          <img
-            src="https://images.unsplash.com/photo-1564460576398-ef55d99548b2?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80"
-            alt=""
-          />
-        </div>
-      </section>
-
-      <section className="card">
-        <div className="text-content">
-          <h3>Design that Speaks to Your Audience</h3>
-          <p>
-            We work closely with you to understand your brand and your
-            customers, so we can create a website that speaks directly to your
-            target audience.
-          </p>
-          <a href="#">Join now</a>
-        </div>
-        <div className="visual">
-          <img
-            src="https://images.unsplash.com/photo-1631085274261-0ace0296eaa0?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMTExMDg&ixlib=rb-4.0.3&q=80"
-            alt=""
-          />
-        </div>
-      </section>
-
-      <section className="card">
-        <div className="text-content">
-          <h3>Design that Drives Results for Your Business</h3>
-          <p>
-            We specialize in creating websites that not only look great but also
-            drive traffic and conversions. Let us help you create a website that
-            delivers real business value.
-          </p>
-          <a href="#">Join now</a>
-        </div>
-        <div className="visual">
-          <img
-            src="https://images.unsplash.com/photo-1611703372231-02ffff8abee6?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMTEyNTU&ixlib=rb-4.0.3&q=80"
-            alt=""
-          />
+          <img src={imgProject2} alt="" className="project-image" />
         </div>
       </section>
     </article>
