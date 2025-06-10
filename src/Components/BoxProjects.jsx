@@ -10,29 +10,30 @@ const BoxProjects = () => {
   const [visible1, setVisible1] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.target === ref1.current && entry.isIntersecting) {
-            setVisible1(true);
-          }
-          if (entry.target === ref2.current && entry.isIntersecting) {
-            setVisible2(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === ref1.current) {
+          setVisible1(entry.isIntersecting);
+        }
+        if (entry.target === ref2.current) {
+          setVisible2(entry.isIntersecting);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-    if (ref1.current) observer.observe(ref1.current);
-    if (ref2.current) observer.observe(ref2.current);
+  if (ref1.current) observer.observe(ref1.current);
+  if (ref2.current) observer.observe(ref2.current);
 
-    return () => {
-      if (ref1.current) observer.unobserve(ref1.current);
-      if (ref2.current) observer.unobserve(ref2.current);
-    };
-  }, []);
+  return () => {
+    if (ref1.current) observer.unobserve(ref1.current);
+    if (ref2.current) observer.unobserve(ref2.current);
+  };
+}, []);
+
 
   return (
     <article>
