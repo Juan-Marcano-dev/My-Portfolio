@@ -1,10 +1,10 @@
 .skills-section {
   text-align: center;
-  padding: 48px 24px;
+  padding: 210px 44px;
 
   h2 {
     color: #fff;
-    font-size: 2em;
+    font-size: 3rem;
     margin-bottom: 70px;
   }
 
@@ -12,11 +12,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 44px;
 
     img {
-      width: 32px;
-      height: 32px;
+      width: 140px;
+      height: 150px;
       transition: transform 0.3s ease;
 
       &:hover {
