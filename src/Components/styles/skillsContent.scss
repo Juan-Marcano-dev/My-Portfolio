@@ -1,0 +1,27 @@
+.skills-section {
+  text-align: center;
+  padding: 48px 24px;
+
+  h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 70px;
+  }
+
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
