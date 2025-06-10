@@ -46,7 +46,11 @@ useEffect(() => {
           <p>
             In this app I make use of my React, JavaScript, HTML, CSS, Sass and API consumption skills to create a scalable, neat and fully functional app including a score system that is stored locally.
           </p>
-          <a href="https://juan-marcano-dev.github.io/Quiz-Game-React/">Join now</a>
+          <div>
+            <a href="https://juan-marcano-dev.github.io/Quiz-Game-React/">Test</a>
+          <a href="https://github.com/Juan-Marcano-dev/Quiz-Game-React">Code</a>
+          </div>
+          
         </div>
         <div className="visual">
           <img src={imgProject1} alt="" className="project-image" />
@@ -62,7 +66,8 @@ useEffect(() => {
           <p>
             In this application, I apply my skills in React, JavaScript, and API consumption to create a dynamic character search engine based on the Rick and Morty universe. I implemented custom pagination logic, efficiently managed component state, and designed an interface in line with the style of the series, achieving a clean, scalable, and interactive experience.
           </p>
-          <a href="https://juan-marcano-dev.github.io/RickAndMorty-API/">Join now</a>
+          <a href="https://juan-marcano-dev.github.io/RickAndMorty-API/">Test</a>
+          <a href="https://github.com/Juan-Marcano-dev/RickAndMorty-API">Code</a>
         </div>
         <div className="visual">
           <img src={imgProject2} alt="" className="project-image" />
