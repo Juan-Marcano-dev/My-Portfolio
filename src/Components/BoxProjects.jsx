@@ -10,29 +10,30 @@ const BoxProjects = () => {
   const [visible1, setVisible1] = useState(false);
   const [visible2, setVisible2] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.target === ref1.current && entry.isIntersecting) {
-            setVisible1(true);
-          }
-          if (entry.target === ref2.current && entry.isIntersecting) {
-            setVisible2(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.target === ref1.current) {
+          setVisible1(entry.isIntersecting);
+        }
+        if (entry.target === ref2.current) {
+          setVisible2(entry.isIntersecting);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-    if (ref1.current) observer.observe(ref1.current);
-    if (ref2.current) observer.observe(ref2.current);
+  if (ref1.current) observer.observe(ref1.current);
+  if (ref2.current) observer.observe(ref2.current);
 
-    return () => {
-      if (ref1.current) observer.unobserve(ref1.current);
-      if (ref2.current) observer.unobserve(ref2.current);
-    };
-  }, []);
+  return () => {
+    if (ref1.current) observer.unobserve(ref1.current);
+    if (ref2.current) observer.unobserve(ref2.current);
+  };
+}, []);
+
 
   return (
     <article>
@@ -45,7 +46,11 @@ const BoxProjects = () => {
           <p>
             In this app I make use of my React, JavaScript, HTML, CSS, Sass and API consumption skills to create a scalable, neat and fully functional app including a score system that is stored locally.
           </p>
-          <a href="https://juan-marcano-dev.github.io/Quiz-Game-React/">Join now</a>
+          <div>
+            <a href="https://juan-marcano-dev.github.io/Quiz-Game-React/">Test</a>
+          <a href="https://github.com/Juan-Marcano-dev/Quiz-Game-React">Code</a>
+          </div>
+          
         </div>
         <div className="visual">
           <img src={imgProject1} alt="" className="project-image" />
@@ -61,7 +66,8 @@ const BoxProjects = () => {
           <p>
             In this application, I apply my skills in React, JavaScript, and API consumption to create a dynamic character search engine based on the Rick and Morty universe. I implemented custom pagination logic, efficiently managed component state, and designed an interface in line with the style of the series, achieving a clean, scalable, and interactive experience.
           </p>
-          <a href="https://juan-marcano-dev.github.io/RickAndMorty-API/">Join now</a>
+          <a href="https://juan-marcano-dev.github.io/RickAndMorty-API/">Test</a>
+          <a href="https://github.com/Juan-Marcano-dev/RickAndMorty-API">Code</a>
         </div>
         <div className="visual">
           <img src={imgProject2} alt="" className="project-image" />
