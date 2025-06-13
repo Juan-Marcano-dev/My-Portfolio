@@ -4,6 +4,7 @@ import ContentMain from "../ContentMain";
 import ScrollArrow from "../ScrollArrow";
 import BoxProjects from "../BoxProjects";
 import SkillsContent from "../SkillsContent";
+import ContactForm from '../ContactForm';
 function Layout() {
   return (
     <>
@@ -13,6 +14,7 @@ function Layout() {
       <ContentMain />
       <BoxProjects />
       <SkillsContent />
+      <ContactForm />
     </>
   );
 }

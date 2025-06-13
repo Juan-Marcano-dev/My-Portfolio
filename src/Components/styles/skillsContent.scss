@@ -1,11 +1,12 @@
 .skills-section {
   text-align: center;
-  padding: 210px 44px;
+  padding: 250px 44px;
 
   h2 {
     color: #fff;
     font-size: 3rem;
     margin-bottom: 70px;
+    padding-bottom: 55px;
   }
 
   .skills-icons {
@@ -22,6 +23,7 @@
       &:hover {
         transform: scale(1.2);
       }
+      
     }
   }
 }
