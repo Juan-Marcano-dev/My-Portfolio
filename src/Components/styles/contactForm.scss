@@ -1,0 +1,130 @@
+.contact_us {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+
+  .contact_inner {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 20px 22px 44px #ccc;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+
+    .contact_field {
+      padding: 60px 340px 90px 100px;
+
+      h3 {
+        color: #000;
+        font-size: 40px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #000;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 35px;
+      }
+
+      .form-control {
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #f8f9fa;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+          border-bottom: 2px solid #1325e8;
+        }
+
+        &::placeholder {
+          font-size: 13px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .contact_form_submit {
+        background: linear-gradient(to top right, #0b0c10 -5%, #0c1d54 100%);
+        border: none;
+        color: #f8f9fa;
+        padding: 10px 15px;
+        width: 100%;
+        margin-top: 25px;
+        border-radius: 35px;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 2px;
+        transition: background 0.4s ease, transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          background: linear-gradient(to top right, #0c1d54, #0b0c10);
+        }
+      }
+    }
+
+    .right_conatct_social_icon {
+      background: linear-gradient(to top right, #0b0c10 -5%, #0c1d54  100%);
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .socil_item_inner {
+        display: flex;
+        padding-bottom: 10px;
+
+        li {
+          list-style: none;
+
+          a {
+            color: #fff;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+            &:hover {
+              color: #00ffff;
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+    }
+
+    .contact_info_sec {
+      position: absolute;
+      background-color: #0b0c10;
+      right: 1px;
+      top: 18%;
+      height: 340px;
+      width: 340px;
+      padding: 40px;
+      border-radius: 25px 0 0 25px;
+
+      h4 {
+        letter-spacing: 1px;
+        padding-bottom: 15px;
+        color: #fff;
+      }
+
+      .info_single {
+        margin: 30px 0;
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        i {
+          margin-right: 15px;
+        }
+
+        span {
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

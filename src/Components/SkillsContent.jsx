@@ -6,6 +6,8 @@ import bootstrap from "../assets/images/bootstrap.svg";
 import react from "../assets/images/react.svg";
 import sass from "../assets/images/sass.svg";
 import javascript from "../assets/images/javascript.svg";
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const SkillsContent = () => {
   const titleRef = useRef(null);
@@ -37,12 +39,31 @@ const SkillsContent = () => {
       </h2>
 
       <div className="skills-icons">
-        <img src={html} alt="HTML" />
-        <img src={css} alt="CSS" />
-        <img src={bootstrap} alt="Bootstrap" />
-        <img src={react} alt="React" />
-        <img src={sass} alt="Sass" />
-        <img src={javascript} alt="JavaScript" />
+        <img data-tooltip-id="my-tooltip"
+  data-tooltip-content="HTML" src={html} alt="HTML"/>
+        <img  data-tooltip-id="my-tooltip"
+  data-tooltip-content="CSS" src={css} alt="CSS" />
+        <img  data-tooltip-id="my-tooltip"
+  data-tooltip-content="BootStrap" src={bootstrap} alt="Bootstrap" />
+        <img  data-tooltip-id="my-tooltip"
+  data-tooltip-content="React" src={react} alt="React" />
+        <img  data-tooltip-id="my-tooltip"
+  data-tooltip-content="Sass" src={sass} alt="Sass" />
+        <img  data-tooltip-id="my-tooltip"
+  data-tooltip-content="JavaScript" src={javascript} alt="JavaScript" />
+        
+  <Tooltip id="my-tooltip" place="top"
+  className="custom-tooltip"
+  style={{
+    backgroundColor: "#0b0c10",       
+    color: "#f8f9fa",                 
+    borderRadius: "10px",
+    padding: "10px 14px",
+    fontSize: "14px",
+    fontWeight: "bold",
+    boxShadow: "0 0 12px #0c1d54",  
+    zIndex: 1000
+  }} />
       </div>
     </section>
   );

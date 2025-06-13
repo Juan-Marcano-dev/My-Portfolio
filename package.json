@@ -20,6 +20,7 @@
     "react-dom": "^19.1.0",
     "react-parallax": "^3.5.2",
     "react-scroll": "^1.9.3",
+    "react-tooltip": "^5.29.0",
     "reactstrap": "^9.2.3",
     "reveal.js": "^5.2.1"
   },
