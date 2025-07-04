@@ -11,13 +11,14 @@ import "react-tooltip/dist/react-tooltip.css";
 
 const SkillsContent = () => {
   const titleRef = useRef(null);
-  const [animate, setAnimate] = useState(false);
+  const iconsRef = useRef(null);
+
+  const [animateTitle, setAnimateTitle] = useState(false);
+  const [animateIcons, setAnimateIcons] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setAnimate(entry.isIntersecting);
-      },
+      ([entry]) => setAnimateTitle(entry.isIntersecting),
       { threshold: 0.1 }
     );
 
@@ -28,55 +29,113 @@ const SkillsContent = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setAnimateIcons(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    if (iconsRef.current) observer.observe(iconsRef.current);
+
+    return () => {
+      if (iconsRef.current) observer.unobserve(iconsRef.current);
+    };
+  }, []);
+
   return (
     <section className="skills-section">
       <h2
         ref={titleRef}
         className={`animate__animated ${
-          animate ? "animate__zoomIn animate__duration-2s" : ""
+          animateTitle ? "animate__zoomIn animate__duration-2s" : ""
         }`}
-        style={{ opacity: animate ? 1 : 0 }}
+        style={{ opacity: animateTitle ? 1 : 0 }}
       >
         My Skills
       </h2>
 
-      <div className="skills-icons">
-        <img
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="HTML"
-          src={html}
-          alt="HTML"
-        />
-        <img
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="CSS"
-          src={css}
-          alt="CSS"
-        />
-        <img
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="BootStrap"
-          src={bootstrap}
-          alt="Bootstrap"
-        />
-        <img
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="React"
-          src={react}
-          alt="React"
-        />
-        <img
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="Sass"
-          src={sass}
-          alt="Sass"
-        />
-        <img
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content="JavaScript"
-          src={javascript}
-          alt="JavaScript"
-        />
+      <div
+        ref={iconsRef}
+        className={`skills-icons animate__animated ${
+          animateIcons ? "animate__zoomIn animate__duration-2s" : ""
+        }`}
+        style={{ opacity: animateIcons ? 1 : 0 }}
+      >
+        <a
+          href="https://developer.mozilla.org/es/docs/Web/HTML"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="HTML"
+            src={html}
+            alt="HTML"
+          />
+        </a>
+        <a
+          href="https://developer.mozilla.org/es/docs/Web/CSS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <img
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="CSS"
+            src={css}
+            alt="CSS"
+          />
+        </a>
+        <a
+          href="https://getbootstrap.com/docs/4.1/getting-started/introduction/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Bootstrap"
+            src={bootstrap}
+            alt="Bootstrap"
+          />
+        </a>
+
+        <a
+          href="https://es.react.dev/learn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="React"
+            src={react}
+            alt="React"
+          />
+        </a>
+        <a
+          href="https://sass-lang.com/documentation/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          <img
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Sass"
+            src={sass}
+            alt="Sass"
+          />
+        </a>
+        <a
+          href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="JavaScript"
+            src={javascript}
+            alt="JavaScript"
+          />
+        </a>
 
         <Tooltip
           id="my-tooltip"

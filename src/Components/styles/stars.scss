@@ -26,18 +26,13 @@ body {
 }
 
 @keyframes bling {
-  0% {
-    transform: scale(0) rotateZ(45deg) translate(-300px);
-    background: #ff00ff;
-  }
-
-  50% {
-    transform: scale(1) rotateZ(45deg) translate(0);
+  0%, 100% {
+    transform: scale(1) rotateZ(45deg);
     background: #ffffff;
   }
-
-  100% {
-    transform: scale(0) rotateZ(45deg) translate(300px);
-    background: #0000ff;
+  50% {
+    transform: scale(1.5) rotateZ(45deg);
+    
   }
 }
+

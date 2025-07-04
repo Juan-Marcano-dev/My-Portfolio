@@ -5,7 +5,7 @@ const StarSky = () => {
     id: i,
     top: Math.random() * window.innerHeight, 
     left: Math.random() * window.innerWidth,
-    delay: Math.random() * -6000,
+    delay: Math.random() * -4000,
   }));
 
   return (
