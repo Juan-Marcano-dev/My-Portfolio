@@ -1,11 +1,10 @@
 .contact_us {
-  background-color: #f8f9fa;
   padding: 10px 0;
+  height: 480px;
 
   .contact_inner {
     background-color: #fff;
     position: relative;
-    box-shadow: 20px 22px 44px #ccc;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -66,8 +65,8 @@
       }
     }
 
-    .right_conatct_social_icon {
-      background: linear-gradient(to top right, #0b0c10 -5%, #0c1d54  100%);
+    .side-column {
+      background: linear-gradient(to top right, #0b0c10 -5%, #0c1d54 100%);
       height: 100%;
       display: flex;
       align-items: flex-end;
@@ -98,20 +97,20 @@
       position: absolute;
       background-color: #0b0c10;
       right: 1px;
-      top: 18%;
-      height: 340px;
-      width: 340px;
-      padding: 40px;
+      bottom: 12px;
+      height: 460px;
+      width: 300px;
       border-radius: 25px 0 0 25px;
 
       h4 {
         letter-spacing: 1px;
         padding-bottom: 15px;
         color: #fff;
+        margin-top: 0px;
       }
 
       .info_single {
-        margin: 30px 0;
+        margin: 50px 0;
         display: flex;
         align-items: center;
         color: #fff;
@@ -123,6 +122,84 @@
         span {
           font-size: 14px;
           letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 1280px) {
+    .contact_inner {
+      .contact_field {
+        padding: 60px 200px 90px 60px;
+      }
+      .contact_info_sec {
+        width: 0px;
+      }
+     
+    }
+  }
+
+  @media (max-width: 992px) {
+    .contact_inner {
+      .contact_field {
+        padding: 50px 100px 70px 50px;
+      }
+
+      .contact_info_sec {
+        width: 0px;
+      }
+
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 708px) {
+    .contact_inner {
+      .contact_field {
+        padding: 40px 40px 60px 40px;
+
+        h3 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .contact_form_submit {
+          font-size: 13px;
+        }
+      }
+
+      .contact_info_sec {
+        width: 0px;
+      }
+
+      .right_conatct_social_icon .socil_item_inner {
+        justify-content: center;
+        padding-bottom: 20px;
+
+        li a {
+          margin: 0 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 476px) {
+    .contact_inner {
+      .contact_field {
+        padding: 30px 20px;
+
+        h3 {
+          font-size: 24px;
+        }
+
+        .contact_form_submit {
+          font-size: 12px;
+          padding: 10px;
         }
       }
     }

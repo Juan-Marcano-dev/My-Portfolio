@@ -4,14 +4,11 @@ $midgrey: #b4b2b2;
 $darkgrey: #554842;
 $darkred: #0c1d54;
 
-body {
-  overflow-x: hidden;
-}
 
 .rocket-wrapper {
-  position: absolute;
-  top: 30px; 
+  position: absolute; 
   left: 50%;
+  top: -280px;
   transform: translateX(-50%);
   width: 55px;
   height: 180px;
@@ -19,8 +16,13 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 1000;
 }
+
+.rocket-container {
+  position: relative;
+  height: 50vh; 
+}
+
 
 .rocket {
   transform: rotate(180deg) scale(0.6);
