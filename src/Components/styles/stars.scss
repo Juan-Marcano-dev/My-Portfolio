@@ -1,0 +1,43 @@
+body {
+  background: radial-gradient(ellipse at center, #1b2749 0%, #090a0f 80%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.sky {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  
+}
+
+.star {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  clip-path: polygon(
+    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%,
+    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+  );
+  animation: bling 11000ms linear infinite;
+}
+
+@keyframes bling {
+  0% {
+    transform: scale(0) rotateZ(45deg) translate(-300px);
+    background: #ff00ff;
+  }
+
+  50% {
+    transform: scale(1) rotateZ(45deg) translate(0);
+    background: #ffffff;
+  }
+
+  100% {
+    transform: scale(0) rotateZ(45deg) translate(300px);
+    background: #0000ff;
+  }
+}

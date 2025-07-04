@@ -1,5 +1,5 @@
-
 import "./styles/contactForm.scss";
+import contact from '../assets/images/contact-logo.svg';
 
 const ContactSection = () => {
   return (
@@ -14,7 +14,8 @@ const ContactSection = () => {
                     <div className="contact_field">
                       <h3>Contact me</h3>
                       <p>
-                        Are you interested in my profile? Let's achieve great things together!
+                        Are you interested in my profile? Let's achieve great
+                        things together!
                       </p>
                       <input
                         type="text"
@@ -34,26 +35,9 @@ const ContactSection = () => {
                     </div>
                   </div>
                 </div>
-
+    
                 <div className="col-md-2">
-                  <div className="right_conatct_social_icon d-flex align-items-end">
-                    <ul className="socil_item_inner d-flex">
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-facebook-square"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                    </ul>
+                  <div className="side-column">
                   </div>
                 </div>
               </div>

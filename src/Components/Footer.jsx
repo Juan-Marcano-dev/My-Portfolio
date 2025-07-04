@@ -2,12 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import "./styles/footer.scss";
-import whatsapp from "../assets/images/whatsapp-logo.svg"
-import linkedin from "../assets/images/linkedin-logo.svg"
-import github from "../assets/images/github-logo.svg"
+import whatsapp from "../assets/images/whatsapp-logo.svg";
+import linkedin from "../assets/images/linkedin-logo.svg";
+import github from "../assets/images/github-logo.svg";
 
-
-const SkillsContent = () => {
+function Footer() {
   const titleRef = useRef(null);
   const [animate, setAnimate] = useState(false);
 
@@ -25,23 +24,30 @@ const SkillsContent = () => {
       if (titleRef.current) observer.unobserve(titleRef.current);
     };
   }, []);
-};
 
-function Footer() {
   return (
-    <>
+    <footer
+      ref={titleRef}
+      className={`animate__animated ${
+        animate ? "animate__zoomIn animate__duration-2s" : ""
+      }`}
+      style={{ opacity: animate ? 1 : 0 }}
+    >
       <div>
         <h4>Juan Marcano ©</h4>
       </div>
       <div className="icons-footer">
-        <a href="">
-            <img src={github}/>
+        <a href="https://github.com/Juan-Marcano-dev" target="_blank" rel="noreferrer">
+          <img src={github} alt="GitHub" />
         </a>
-        
-        <img src={linkedin}/>
-        <img src={whatsapp}/>
+        <a href="https://www.linkedin.com/in/juan-marcano-07146b372/" target="_blank" rel="noreferrer">
+          <img src={linkedin} alt="LinkedIn" />
+        </a>
+        <a href="https://wa.me/+51930552074" target="_blank" rel="noreferrer">
+          <img src={whatsapp} alt="WhatsApp" />
+        </a>
       </div>
-    </>
+    </footer>
   );
 }
 

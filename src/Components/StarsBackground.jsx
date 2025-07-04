@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./styles/StarsBackground.scss";
 import GravityText from "./GravityText";
+
+
 function StarsBackground() {
   const [layers, setLayers] = useState({});
 
@@ -15,7 +17,7 @@ function StarsBackground() {
         size,
         x: Math.floor(Math.random() * width),
         y: Math.floor(Math.random() * height),
-        duration: durationBase + Math.random() * 20,
+        duration: durationBase + Math.random() * 30,
         delay: Math.random() * 10,
       }));
     };

@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import "./styles/ContentMain.scss";
-import StarsBackground from "./StarsBackground";
 
 function ScrollEffect() {
   const leftRef = useRef(null);
@@ -38,7 +37,7 @@ function ScrollEffect() {
 
   return (
     <>
-    <div style={{ height: '100vh' }}></div>
+    <div style={{ height: '100vh' }} className="title"><h3 className="animate__fadeInUp">About Me</h3></div>
 
     <Container>
       <Row className="py-5">
