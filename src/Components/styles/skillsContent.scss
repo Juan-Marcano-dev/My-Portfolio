@@ -14,11 +14,14 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 44px;
+    
+
 
     img {
       width: 140px;
       height: 150px;
       transition: transform 0.3s ease;
+      cursor: default;
 
       &:hover {
         transform: scale(1.2);

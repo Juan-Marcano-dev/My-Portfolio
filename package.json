@@ -15,7 +15,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.5",
-    "framer-motion": "^12.9.2",
+    "framer-motion": "^12.23.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-parallax": "^3.5.2",

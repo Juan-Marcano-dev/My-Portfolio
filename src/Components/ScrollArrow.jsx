@@ -10,7 +10,7 @@ const ScrollArrow = () => {
   const handleClick = () => {
     const container = document.getElementById('container');
     if (container) {
-      container.scrollIntoView({ behavior: 'smooth' });
+      container.scrollIntoView({ behavior: 'smooth' , block: 'center', });
     }
   };
 
