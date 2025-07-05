@@ -48,7 +48,7 @@ function ScrollEffect() {
         className="title"
         initial={{ opacity: 0, y: 40 }}
         animate={isTitleInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" }}
       >
         About Me
       </motion.h3>
