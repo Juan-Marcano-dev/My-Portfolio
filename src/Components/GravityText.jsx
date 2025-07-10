@@ -3,7 +3,6 @@ import Sky from "./Stars";
 const GravityText = () => {
   return (
     <>
-    
     <div className="gravity-container">
       <div className="horizon"></div>
       <div className="earth"></div>

@@ -1,7 +1,7 @@
 @use "./globalStyles.scss";
 
 .color-navbar {
-  background-color: transparent;
+  width: calc(100% - 8px);  
 }
 
 .logo-text {
@@ -9,10 +9,11 @@
   margin-left: 30px;
   transition: 0.25s;
   background: none;
-  border: 2px solid;
+  border: 1.5px solid;
   line-height: 1;
   margin: 0.5em;
-  padding: 1em 2em;
+  padding: 1em 3em;
+  border-radius: 8px;
 
   &:hover {
     box-shadow: 0 0.5em 0.5em -0.4em var(--hover-color);
@@ -27,14 +28,21 @@
     color: var(--text-color);
   }
 }
+#aboutMe {
+    scroll-margin-top: 80px;
+  }
 
 .raise {
   transition: 0.25s;
   background: none;
-  border: 2px solid;
+  border: 1.5px solid;
   line-height: 1;
   margin: 0.5em;
-  padding: 1em 2em;
+  padding: 1em 3em;
+  position: relative;
+  padding-right: 30px;
+  margin-right: 30px;
+  border-radius: 8px;
 
   &:hover,
   &:focus {

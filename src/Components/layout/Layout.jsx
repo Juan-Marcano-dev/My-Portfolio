@@ -6,13 +6,22 @@ import BoxProjects from "../BoxProjects";
 import SkillsContent from "../SkillsContent";
 import ContactForm from "../ContactForm";
 import Footer from "../Footer";
+import { useRef } from "react";
 function Layout() {
+  const containerRef = useRef(null);
+  const handleScrollToContentMain = () => {
+    containerRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    
+  };
   return (
     <>
       <Navbar />
       <StarsBackground />
-      <ScrollArrow />
-      <ContentMain />
+      <ScrollArrow handleScrollToContentMain={handleScrollToContentMain} />
+      <ContentMain containerRef={containerRef} />
       <BoxProjects />
       <SkillsContent />
       <ContactForm />

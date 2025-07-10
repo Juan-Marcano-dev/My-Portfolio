@@ -46,10 +46,33 @@ $primary-text-color: var(--text-color);
   letter-spacing: 10px;
   z-index: 2;
 
+  #title-1 {
+    font-size: 1.8rem;
+  }
+  #title-2 {
+    font-size: 3rem;
+  }
   span {
     background: -webkit-linear-gradient($primary-text-color, #38495a);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 460px) {
+  #title {
+    width: 100vw;
+    height: 300px;
+  }
+  #title-1 {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  #title-2 {
+    margin-top: 10px;
+    display: block;
+    font-size: 50px;
+    font-weight: 300;
   }
 }

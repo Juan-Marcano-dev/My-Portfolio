@@ -2,14 +2,12 @@ import { useEffect, useState } from "react";
 import "./styles/StarsBackground.scss";
 import GravityText from "./GravityText";
 
-
 function StarsBackground() {
   const [layers, setLayers] = useState({});
 
   useEffect(() => {
     const width = window.innerWidth;
     const height = Math.max(document.body.scrollHeight, window.innerHeight);
-
 
     const generateStars = (count, size, durationBase) => {
       return Array.from({ length: count }).map((_, i) => ({
@@ -23,9 +21,9 @@ function StarsBackground() {
     };
 
     setLayers({
-      small: generateStars(150, 1, 50),
-      medium: generateStars(100, 2, 100),
-      big: generateStars(70, 3, 150),
+      small: generateStars(20, 1, 50),
+      medium: generateStars(35, 2, 100),
+      big: generateStars(50, 3, 150),
     });
   }, []);
 
@@ -49,9 +47,9 @@ function StarsBackground() {
       )}
 
       <div id="title">
-        <span>Juan Marcano</span>
+        <span id="title-1">Portfolio</span>
         <br />
-        <span>Portfolio Frontend</span>
+        <span id="title-2">Juan Marcano</span>
       </div>
       <GravityText />
     </div>
