@@ -38,13 +38,13 @@ function Footer() {
       </div>
       <div className="icons-footer">
         <a href="https://github.com/Juan-Marcano-dev" target="_blank" rel="noreferrer">
-          <img src={github} alt="GitHub" />
+          <img src={github} alt="GitHub" loading="lazy" />
         </a>
         <a href="https://www.linkedin.com/in/juan-marcano-07146b372/" target="_blank" rel="noreferrer">
-          <img src={linkedin} alt="LinkedIn" />
+          <img src={linkedin} alt="LinkedIn" loading="lazy" />
         </a>
         <a href="https://wa.me/+51930552074" target="_blank" rel="noreferrer">
-          <img src={whatsapp} alt="WhatsApp" />
+          <img src={whatsapp} alt="WhatsApp" loading="lazy" />
         </a>
       </div>
     </footer>

@@ -45,6 +45,7 @@ const SkillsContent = () => {
   return (
     <section className="skills-section">
       <h2
+      id="skills"
         ref={titleRef}
         className={`animate__animated ${
           animateTitle ? "animate__zoomIn animate__duration-2s" : ""
@@ -71,6 +72,7 @@ const SkillsContent = () => {
             data-tooltip-content="HTML"
             src={html}
             alt="HTML"
+            loading="lazy"
           />
         </a>
         <a
@@ -84,6 +86,7 @@ const SkillsContent = () => {
             data-tooltip-content="CSS"
             src={css}
             alt="CSS"
+            loading="lazy"
           />
         </a>
         <a
@@ -96,6 +99,7 @@ const SkillsContent = () => {
             data-tooltip-content="Bootstrap"
             src={bootstrap}
             alt="Bootstrap"
+            loading="lazy"
           />
         </a>
 
@@ -109,6 +113,7 @@ const SkillsContent = () => {
             data-tooltip-content="React"
             src={react}
             alt="React"
+            loading="lazy"
           />
         </a>
         <a
@@ -122,6 +127,7 @@ const SkillsContent = () => {
             data-tooltip-content="Sass"
             src={sass}
             alt="Sass"
+            loading="lazy"
           />
         </a>
         <a
@@ -134,24 +140,11 @@ const SkillsContent = () => {
             data-tooltip-content="JavaScript"
             src={javascript}
             alt="JavaScript"
+            loading="lazy"
           />
         </a>
 
-        <Tooltip
-          id="my-tooltip"
-          place="top"
-          className="custom-tooltip"
-          style={{
-            backgroundColor: "#0b0c10",
-            color: "#f8f9fa",
-            borderRadius: "10px",
-            padding: "10px 14px",
-            fontSize: "14px",
-            fontWeight: "bold",
-            boxShadow: "0 0 12px #0c1d54",
-            zIndex: 1000,
-          }}
-        />
+        <Tooltip id="my-tooltip" place="top" className="custom-tooltip" />
       </div>
     </section>
   );

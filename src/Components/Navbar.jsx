@@ -28,22 +28,22 @@ function NavbarSection() {
         <Collapse isOpen={openedNavBar} navbar>
           <Nav className="ms-auto" navbar>
             <NavItem>
-              <NavLink href="#" className="raise">
+              <NavLink href="#aboutMe" className="raise">
                 About me
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#" className="raise">
+              <NavLink href="#projects" className="raise">
                 Projects
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#" className="raise">
+              <NavLink href="#skills" className="raise">
                 Skills
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#" className="raise">
+              <NavLink href="#contactMe" className="raise" id="contact">
                 Contact
               </NavLink>
             </NavItem>

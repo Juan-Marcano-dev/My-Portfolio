@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react';
 import './styles/ScrollArrow.scss';
 
 
-const ScrollArrow = () => {
-  const [isVisible, setIsVisible] = useState(true);
+const ScrollArrow = ({handleScrollToContentMain}) => {
 
-  
 
   const handleClick = () => {
     const container = document.getElementById('container');
@@ -14,9 +12,9 @@ const ScrollArrow = () => {
     }
   };
 
-  return isVisible ? (
+  return  (
     <div className='rocket-container'>
-    <div className="rocket-wrapper" onClick={handleClick}>
+    <div className="rocket-wrapper" onClick={handleScrollToContentMain}>
       <div className="rocket">
         <div className="rocket-body">
           <div className="body"></div>
@@ -28,7 +26,7 @@ const ScrollArrow = () => {
       </div>
     </div>
     </div>
-  ) : null;
+  );
 };
 
 export default ScrollArrow;

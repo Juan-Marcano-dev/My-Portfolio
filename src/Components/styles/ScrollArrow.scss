@@ -103,3 +103,11 @@ $darkred: #0c1d54;
     background: linear-gradient(to bottom, transparent 12%, $white 100%);
   }
 }
+
+@media (max-height: 600px) {
+  .rocket-wrapper {
+    top: -190px; 
+    scale: 0.5; 
+    padding-top: 20px;
+  }
+}
