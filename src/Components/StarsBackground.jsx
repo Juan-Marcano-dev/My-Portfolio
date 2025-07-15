@@ -21,9 +21,9 @@ function StarsBackground() {
     };
 
     setLayers({
-      small: generateStars(20, 1, 50),
-      medium: generateStars(35, 2, 100),
-      big: generateStars(50, 3, 150),
+      small: generateStars(15, 1, 50),
+      medium: generateStars(30, 2, 100),
+      big: generateStars(45, 3, 150),
     });
   }, []);
 
