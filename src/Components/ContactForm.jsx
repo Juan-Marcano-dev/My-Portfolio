@@ -1,6 +1,5 @@
 import "./styles/contactForm.scss";
-import contact from '../assets/images/contact-logo.svg';
-
+import contact from "../assets/images/contact-logo.svg";
 const ContactSection = () => {
   return (
     <section className="contact_us" id="contactMe">
@@ -35,10 +34,9 @@ const ContactSection = () => {
                     </div>
                   </div>
                 </div>
-    
+
                 <div className="col-md-2">
-                  <div className="side-column">
-                  </div>
+                  <div className="side-column"></div>
                 </div>
               </div>
 
