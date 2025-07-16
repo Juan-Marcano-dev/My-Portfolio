@@ -1,5 +1,5 @@
 import "./styles/contactForm.scss";
-import contact from "../assets/images/contact-logo.svg";
+
 const ContactSection = () => {
   return (
     <section className="contact_us" id="contactMe">
@@ -10,28 +10,51 @@ const ContactSection = () => {
               <div className="row">
                 <div className="col-md-10">
                   <div className="contact_form_inner">
-                    <div className="contact_field">
+                    <form
+                      className="contact_field"
+                      action="https://formsubmit.co/juan.marcano.dev@gmail.com"
+                      method="POST"
+                      target="_blank"
+                    >
+                      <input type="hidden" name="_captcha" value="false" />
+                      <input
+                        type="hidden"
+                        name="_subject"
+                        value="Nuevo mensaje desde el portafolio"
+                      />
+                      <input type="hidden" name="_template" value="box" />
+
                       <h3>Contact me</h3>
                       <p>
                         Are you interested in my profile? Let's achieve great
                         things together!
                       </p>
+
                       <input
                         type="text"
                         className="form-control form-group"
+                        name="name"
                         placeholder="Name"
+                        required
                       />
                       <input
-                        type="text"
+                        type="email"
                         className="form-control form-group"
+                        name="email"
                         placeholder="Email"
+                        required
                       />
                       <textarea
                         className="form-control form-group"
+                        name="message"
                         placeholder="Message"
+                        required
                       ></textarea>
-                      <button className="contact_form_submit">Send</button>
-                    </div>
+
+                      <button type="submit" className="contact_form_submit">
+                        Send
+                      </button>
+                    </form>
                   </div>
                 </div>
 
