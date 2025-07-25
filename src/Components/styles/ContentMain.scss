@@ -1,4 +1,3 @@
-
 .container{
   position: relative;
   padding-bottom: 180px;
@@ -10,7 +9,7 @@
 .title {
   align-content: center;
   text-align: center;
-  margin-top: 450px;
+  margin-top: 400px;
   
 }  
 h3 {
@@ -39,4 +38,13 @@ h3 {
   transform: translateX(100px);
 }
 
+.img-fluid {
+  height: 550px;
+  position: relative;
+}
+
+.aboutMe{
+  letter-spacing: 2px;
+  line-height: 38px;
+}
 

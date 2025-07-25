@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { motion, useInView } from "framer-motion";
 import "./styles/ContentMain.scss";
+import personalImg from "../assets/images/personal-img.svg";
 
-function ScrollEffect({containerRef}) {
+function ScrollEffect({ containerRef }) {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
 
@@ -38,11 +39,11 @@ function ScrollEffect({containerRef}) {
       if (rightRef.current) observer.unobserve(rightRef.current);
     };
   }, []);
-  
+
   return (
     <>
       <motion.h3
-      id="aboutMe"
+        id="aboutMe"
         ref={titleRef}
         className="title"
         initial={{ opacity: 0, y: 40 }}
@@ -60,12 +61,26 @@ function ScrollEffect({containerRef}) {
               id="left-img"
               className={`fade-in-left ${leftVisible ? "visible" : ""}`}
             >
-              <div className="custom-text-box" id="container" ref={containerRef}>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laudantium adipisci, rerum et amet repellat accusantium
-                  molestiae cumque ducimus doloribus commodi cupiditate deserunt
-                  magni nisi quas ex ab impedit, asperiores fuga.
+              <div
+                className="custom-text-box"
+                id="container"
+                ref={containerRef}
+              >
+                <p className="aboutMe">
+                  "I am a frontend developer with a clear passion:
+                  creating experiences that not only look good, but feel good. I
+                  like to pay attention to detail, understand the “why” behind
+                  things, and not settle for something that simply works—I want
+                  it to have purpose. I have worked on personal projects where I
+                  combine animations, attractive design, and functional logic
+                  using React, SCSS, and modern JavaScript. I don't just follow
+                  tutorials: I like to modify, break, and rebuild until I
+                  thoroughly understand what I'm doing. Beyond the code, I care
+                  about communicating, receiving feedback, and improving with
+                  each iteration. I am hungry to learn, have good judgment when
+                  making decisions, and have the peace of mind of knowing that,
+                  even though I don't know everything, I have the discipline and
+                  curiosity to find out. "
                 </p>
               </div>
             </div>
@@ -78,7 +93,7 @@ function ScrollEffect({containerRef}) {
               className={`fade-in-right ${rightVisible ? "visible" : ""}`}
             >
               <img
-                src="https://th.bing.com/th/id/R.ab2d9a7ecb51718794b72294f5c91e78?rik=4g8D16HaMYsC4g&riu=http%3a%2f%2fpluspng.com%2fimg-png%2flaptop-png-laptop-png-image-6754-4042.png&ehk=1HZ%2bvEATuRwcDM7SldI%2fk2ckN4UsH1V3pABES7uw%2f7Y%3d&risl=&pid=ImgRaw&r=0"
+                src={personalImg}
                 alt="Desde la derecha"
                 loading="lazy"
                 className="img-fluid"
