@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { motion, useInView } from "framer-motion";
 import "./styles/ContentMain.scss";
-import personalImg from "../assets/images/personal-img.svg";
+import personalImg from "../assets/images/personal-img.png";
 
 function ScrollEffect({ containerRef }) {
   const leftRef = useRef(null);

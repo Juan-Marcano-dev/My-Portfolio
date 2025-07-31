@@ -119,6 +119,9 @@ article {
   body {
     padding: 48px 24px 0;
   }
+  .tittle{
+    padding-top: 750px;
+  }
   section.card {
     margin: 64px 0;
     padding: 88px 36px 36px;
@@ -149,5 +152,11 @@ article {
         height: auto;
       }
     }
+  }
+}
+
+@media (min-width: 1380px) {
+  .tittle{
+    padding-top: 200px;
   }
 }

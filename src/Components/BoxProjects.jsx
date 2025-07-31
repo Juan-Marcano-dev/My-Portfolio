@@ -11,7 +11,7 @@ const BoxProjects = () => {
         id="projects"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
+        transition={{ duration: 1.8, ease: "easeOut" }}
         viewport={{ once: false, amount: 0.3 }}
       >
         Projects

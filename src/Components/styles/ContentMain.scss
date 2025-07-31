@@ -39,8 +39,9 @@ h3 {
 }
 
 .img-fluid {
-  height: 550px;
+  height: 650px;
   position: relative;
+  bottom: 150px;
 }
 
 .aboutMe{
@@ -48,3 +49,10 @@ h3 {
   line-height: 38px;
 }
 
+
+@media (max-width: 720px) {
+  .img-fluid {
+    padding-top: 150px;
+    
+  }
+}
