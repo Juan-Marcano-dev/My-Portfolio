@@ -12,65 +12,108 @@
   position: relative;
   box-shadow: 5px 0 0 0 fade(#ccc, 30%), -5px 0 0 0 fade(#ccc, 30%),
     0 5px 0 0 fade(#ccc, 30%);
+
   .text-content {
     display: flex;
     flex-direction: column;
     width: calc(60vw - 192px);
-    h3 {
+
+    .right-card-h3 {
       margin: 0 0 0 25px;
       font-size: 1.5em;
       max-width: 20ch;
-      
     }
-    p {
-      margin: 16px 0 24px 12px;
+    .left-card-h3 {
+      margin: 0 0 0 175px;
+      font-size: 1.5em;
+      max-width: 20ch;
+    }
+    .right-card-p {
+      margin: 16px 0 44px 12px;
       max-width: 60ch;
+      margin-right: 150px;
     }
-    a {
+    .left-card-p {
+      margin: 16px 0 44px 12px;
+      max-width: 60ch;
+      margin-left: 150px;
+    }
+    .buttons-right-a {
       border: 3px solid #000;
       color: #000;
       align-self: flex-start;
       text-decoration: none;
-      padding: 16px 32px;
+      padding: 16px 42px;
       border-radius: 12px;
       transition: 400ms all;
       display: flex;
       width: 100px;
-      margin: 10px 0 0 25px;
-      
+      margin: 10px 0 0 45px;
       justify-content: center;
       &:hover {
         background: #000;
         color: white;
       }
-      
     }
   }
-  .visual {
-    width: 280px;
-    height: 100%;
+
+  .buttons-left-a {
+    border: 3px solid #000;
+    color: #000;
+    align-self: flex-start;
+    text-decoration: none;
+    padding: 16px 42px;
+    border-radius: 12px;
+    transition: 400ms all;
+    display: flex;
+    width: 100px;
+    margin: 10px 0 0 395px;
+    justify-content: center;
+    &:hover {
+      background: #000;
+      color: white;
+    }
+  }
+  .visual-right {
+    width: 380px;
+    height: fit-content;
     position: absolute;
     top: -24px;
     left: 24px;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 44px;
     box-shadow: 1px 2px 6px fade(white, 25%), 2px 6px 12px fade(black, 25%);
     img {
-      height: 100%;
+      height: fit-content;
       width: 100%;
     }
   }
   &:nth-of-type(odd) {
-    margin: 0 0 0 248px;
+    margin: 0 0 0 348px;
     border-radius: 24px 24px 48px 24px;
     padding: 48px 308px 48px 60px;
-    .visual {
-      right: 24px;
-      left: auto;
+    .visual-right {
+      left: 550px;
     }
     .text-content a {
       align-self: flex-start;
     }
+  }
+}
+
+.visual-left {
+  width: 400px;
+  height: 450px;
+  background-color: aquamarine;
+  position: absolute;
+  top: -24px;
+  right: 540px;
+  overflow: hidden;
+  border-radius: 44px;
+  box-shadow: 1px 2px 6px fade(white, 25%), 2px 6px 12px fade(black, 25%);
+  img {
+    width: 100%;
+    height: 450px;
   }
 }
 
@@ -83,8 +126,8 @@
 }
 
 #projects {
-    scroll-margin-top: 80px;
-  }
+  scroll-margin-top: 80px;
+}
 
 article {
   margin: auto;
@@ -119,12 +162,12 @@ article {
   body {
     padding: 48px 24px 0;
   }
-  .tittle{
+  .tittle {
     padding-top: 750px;
   }
   section.card {
     margin: 64px 0;
-    padding: 88px 36px 36px;
+    padding: 88px 36px 0px;
     flex-direction: column;
     border-radius: 24px;
     &:nth-of-type(odd) {
@@ -132,31 +175,71 @@ article {
       border-radius: 24px;
     }
     .text-content {
-      h3 {
-        max-width: calc(100% - 150px);
-        font-size: 1em;
+      .left-card-h3 {
+        font-size: 1.1em;
+        bottom: 45px;
       }
-      p,
-      a {
-        font-size: 0.8em;
+
+      .right-card-h3 {
+        font-size: 1.1em;
+        bottom: 45px;
+      }
+
+      .left-card-p {
+        position: relative;
+        font-size: 0.75em;
+        left: 30px;
+        bottom: 45px;
+      }
+      .right-card-p {
+        right: 30px;
+        position: relative;
+        font-size: 0.75em;
+        bottom: 45px;
+      }
+
+      .buttons-right-a {
+        height: 20px;
+        width: 20px;
+        scale: (0.9);
+        align-items: center;
+        bottom: 55px;
+        position: relative;
       }
     }
-    .visual,
-    &:nth-of-type(odd) .visual {
-      width: 150px;
-      height: 150px;
-      right: 16px;
-      left: auto;
+    .buttons-left-a {
+      height: 20px;
+      width: 20px;
+      scale: (0.9);
+      position: relative;
+      right: 150px;
+      align-items: center;
+      bottom: 55px;
+    }
+
+
+
+    .visual-left,
+    &:nth-of-type(odd) .visual-left {
+      width: 200px;
+      height: 200px;
+      right: 225px;
+      bottom: 10px;
+      img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    .visual-right,
+    &:nth-of-type(odd) .visual-right {
+      width: 200px;
+      height: 200px;
+      left: 225px;
       img {
         width: 100%;
         height: auto;
       }
     }
-  }
-}
-
-@media (min-width: 1380px) {
-  .tittle{
-    padding-top: 200px;
   }
 }
