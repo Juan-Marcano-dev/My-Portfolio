@@ -26,23 +26,23 @@ const BoxProjects = () => {
           viewport={{ once: false, amount: 0.3 }}
         >
           <div className="text-content">
-            <h3>Quizz Game</h3>
-            <p>
+            <h3 className="right-card-h3">Quizz Game</h3>
+            <p className="right-card-p">
               In this app I make use of my React, JavaScript, HTML, CSS, Sass
               and API consumption skills to create a scalable, neat and fully
               functional app including a score system that is stored locally.
             </p>
-            <div>
-              <a href="https://juan-marcano-dev.github.io/Quiz-Game-React/">
+            <div >
+              <a className= "buttons-right-a" href="https://juan-marcano-dev.github.io/Quiz-Game-React/">
                 Test
               </a>
-              <a href="https://github.com/Juan-Marcano-dev/Quiz-Game-React">
+              <a className= "buttons-right-a" href="https://github.com/Juan-Marcano-dev/Quiz-Game-React">
                 Code
               </a>
             </div>
           </div>
-          <div className="visual">
-            <img src={imgProject1} alt="Project 1" className="project-image" />
+          <div className="visual-right">
+            <img src={imgProject1} alt="Project 1" className="project-image-right" />
           </div>
         </motion.section>
 
@@ -54,8 +54,8 @@ const BoxProjects = () => {
           viewport={{ once: false, amount: 0.3 }}
         >
           <div className="text-content">
-            <h3>Dynamic Character Viewer With Rick and Morty API</h3>
-            <p>
+            <h3 className="left-card-h3">Dynamic Character Viewer With Rick and Morty API</h3>
+            <p className="left-card-p">
               In this application, I apply my skills in React, JavaScript, and
               API consumption to create a dynamic character search engine based
               on the Rick and Morty universe. I implemented custom pagination
@@ -63,16 +63,16 @@ const BoxProjects = () => {
               interface in line with the style of the series.
             </p>
             <div>
-              <a href="https://juan-marcano-dev.github.io/RickAndMorty-API/">
+              <a className="buttons-left-a" href="https://juan-marcano-dev.github.io/RickAndMorty-API/">
                 Test
               </a>
-              <a href="https://github.com/Juan-Marcano-dev/RickAndMorty-API">
+              <a className= "buttons-left-a" href="https://github.com/Juan-Marcano-dev/RickAndMorty-API">
                 Code
               </a>
             </div>
           </div>
-          <div className="visual">
-            <img src={imgProject2} alt="Project 2" className="project-image" />
+          <div className="visual-left">
+            <img src={imgProject2} alt="Project 2" className="project-image-left" />
           </div>
         </motion.section>
       </article>
