@@ -1,20 +1,18 @@
-.container{
+.container {
   position: relative;
   padding-bottom: 180px;
   margin-bottom: 290px;
   padding-top: 50px;
   height: 550px;
-
 }
 .title {
   align-content: center;
   text-align: center;
   margin-top: 400px;
-  
-}  
+}
 h3 {
   position: relative;
-  margin-bottom: 80px ;
+  margin-bottom: 80px;
   width: 100vw;
   font-size: 3rem;
 }
@@ -39,20 +37,26 @@ h3 {
 }
 
 .img-fluid {
-  height: 650px;
+  height: 550px;
   position: relative;
-  bottom: 150px;
+  bottom: 80px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 50px #1b2735;
 }
 
-.aboutMe{
+.aboutMe {
   letter-spacing: 2px;
   line-height: 38px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px #1b2735;
 }
-
 
 @media (max-width: 720px) {
   .img-fluid {
     padding-top: 150px;
-    
+    top: 30px;
+  }
+  .aboutMe {
+    font-size: 0.9em;
   }
 }
