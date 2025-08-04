@@ -1,7 +1,7 @@
 @use "./globalStyles.scss";
 
 .color-navbar {
-  width: calc(100% - 8px);  
+  width: calc(100% - 8px);
 }
 
 .logo-text {
@@ -29,8 +29,8 @@
   }
 }
 #aboutMe {
-    scroll-margin-top: 80px;
-  }
+  scroll-margin-top: 80px;
+}
 
 .raise {
   transition: 0.25s;
