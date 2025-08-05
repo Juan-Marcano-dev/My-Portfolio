@@ -31,16 +31,16 @@
 .modal-content button {
   padding: 0.5rem 1rem;
   border: none;
-  background: #333;
-  color: white;
+  background: #0c1d54;
+  color: #f8f9fa;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s;
 }
 
 .modal-content button:hover {
-  background: #555;
-  color: #0b0c10;
+  background: #1c3079;
+  color: #f8f9fa;
 }
 
 @keyframes fadeIn {
