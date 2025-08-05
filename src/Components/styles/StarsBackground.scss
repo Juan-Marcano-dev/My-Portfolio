@@ -37,7 +37,7 @@ $primary-text-color: var(--text-color);
 
 #title {
   position: absolute;
-  top: 40%;
+  top: 30%;
   width: 100%;
   text-align: center;
   color: $primary-text-color;
@@ -47,10 +47,10 @@ $primary-text-color: var(--text-color);
   z-index: 2;
 
   #title-1 {
-    font-size: 1.8rem;
+    font-size: 2.8rem;
   }
   #title-2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   span {
     background: -webkit-linear-gradient($primary-text-color, #38495a);

@@ -47,6 +47,7 @@ function Footer() {
           <img src={whatsapp} alt="WhatsApp" loading="lazy" />
         </a>
       </div>
+      <div className="logo-end">&lt;/JCMR&gt;</div>
     </footer>
   );
 }
